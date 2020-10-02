@@ -1,0 +1,64 @@
+<akomaNtoso>
+    <bill>
+        <meta>
+            <identification>aaaa</identification>
+            <references source="~COM">
+                <TLCLocation xml:id="BEL_BRU" href="http://publications.europa.eu/resource/authority/place/BEL_BRU" showAs="Brussels"/>
+                <TLCOrganization xml:id="CONSIL" href="http://publications.europa.eu/resource/authority/corporate-body/CONSIL" showAs="Council of the European Union"/>
+                <TLCOrganization xml:id="EP" href="http://publications.europa.eu/resource/authority/corporate-body/EP" showAs="European Parliament"/>
+                <TLCOrganization xml:id="COM" href="http://publications.europa.eu/resource/authority/corporate-body/COM" showAs="European Commission"/>
+                <TLCRole xml:id="PRESID" href="http://publications.europa.eu/resource/authority/role/PRESID" showAs="President"/>
+                <TLCReference xml:id="REG" name="docType" href="http://publications.europa.eu/resource/authority/resource-type/REG"  showAs="Regulation"/>
+                <TLCReference xml:id="legalBasis" name="contentSubject" href="http://eurovoc.europa.eu/5456" showAs="Legal basis"/>
+                <TLCReference xml:id="language" name="language" href="http://publications.europa.eu/resource/authority/language/ENG" showAs="en"/>
+            </references>
+        </meta>
+        <preface>
+            <heading>
+                on
+                <placeholder>[...]</placeholder>
+                preface
+                and half bo<b>ld</b>
+                text
+            </heading>
+        </preface>
+        <preamble>
+            <formula>
+                forumla 1
+            </formula>
+        </preamble>
+        <body>
+            <part xml:id="part1">
+                <heading>part-head</heading>
+                <title xml:id="title1">
+                    <heading>title-head</heading>
+                    <num>on
+                        <placeholder>[...]</placeholder>
+                        preface
+                        and half bo<b>ld</b>
+                        text
+                    </num>
+                    <chapter xml:id="chap1">
+                        <num>chapter-num</num>
+                        <heading>chapter-head</heading>
+                        <section xml:id="sect1">
+                            <num>section-num</num>
+                            <heading>section-head</heading>
+                        </section>
+                        <article xml:id="art2">
+                            art 2
+                            <num>Title I</num>
+                            <heading>title</heading>
+                        </article>
+                    </chapter>
+                </title>
+            </part>
+            <hcontainer xml:id="app1">
+                bla bla
+            </hcontainer>
+        </body>
+        <conclusions>
+            <p>Done</p>
+        </conclusions>
+    </bill>
+</akomaNtoso>

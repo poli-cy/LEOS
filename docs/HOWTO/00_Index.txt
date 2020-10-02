@@ -1,0 +1,73 @@
+                            LEOS - HOWTO
+--------------------------------------------------------------------------------
+
+                            REPOSITORY BROWSER
+--------------------------------------------------------------------------------
+1.  Create a legislative proposal
+        - refer to Create a legislative proposal HOWTO
+2.  Open a proposal
+        - refer to Open proposal HOWTO
+3.  Delete a proposal
+        - refer to Delete proposal HOWTO
+4.  Search proposal
+        - refer to Search proposal HOWTO
+5.  Proposal viewer
+        - refer to Proposal viewer HOWTO
+6.  Manage contributors
+        - refer to Manage contributors HOWTO
+7.  Proposal filters
+        - refer to Proposal filters HOWTO
+
+                            DOCUMENT VIEWER
+--------------------------------------------------------------------------------
+08. Document viewer
+        - refer to Document Viewer HOWTO
+09. Edit table of contents
+        - refer to Table of Content HOWTO
+10. Edit document
+    10a.Edit Citations
+        - refer to CITATION EDITION in Leos Editor HOWTO 
+    10b. Edit Recitals
+        - refer to RECITAL EDITION in Leos Editor HOWTO
+    10c. Edit Articles
+        - refer to ARTICLE EDITION in Leos Editor HOWTO
+	10d. Numbered paragraph
+		- refer to NUMBERED PARAGRAPH in Leos Editor HOWTO
+	10e. Sub Paragraph
+		- refer to SUB-PARAGRAPH in Leos Editor HOWTO
+	10f. Transform paragraph to point
+		- refer to TRANSFORM NUMBERED PARAGRAPH TO POINT AND VICE-VERSA in
+		Leos Editor HOWTO
+	10g. Insert References notes
+		- refer to REFERENCES NOTES in Leos Editor HOWTO
+	10h. Insert Cross-REFERENCES
+		- refer to CROSS-REFERENCE in Leos Editor HOWTO
+	10i. Insert Tables
+		- refer to TABLES in Leos Editor HOWTO
+	10j. Insert Formulas
+		- refer to FORMULAS in Leos Editor HOWTO
+	10k. Insert Special Characters
+		- refer to INSERT SPECIAL CHARACTER in Leos Editor HOWTO
+	10l. Display semantics block
+		- refer to SHOW SEMANTICS BLOCKS in Leos Editor HOWTO
+	10m. display Akoma Ntoso code
+		- refer to SHOW AKN CODE in Leos Editor HOWTO
+11. Insert and delete Articles
+        - refer to Articles HOWTO
+12. Edit meta data
+        - refer to Edit metadata HOWTO
+13. Compare two versions
+        - refer to Compare two versions HOWTO
+14. Manage versions
+		- refer to Version types HOWTO
+15. Annotations
+        - refer to Annotations HOWTO
+
+                            MISCELLANEOUS
+--------------------------------------------------------------------------------
+16. User Roles
+        - refer to User Roles HOWTO
+17. Add milestone
+        - refer to Add milestone HOWTO
+18. Structure configuration
+        - refer to Structure configuration HOWTO

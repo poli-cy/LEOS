@@ -1,0 +1,31 @@
+<div class="app-content-wrapper js-thread-list-scroll-root" h-branding="appBackgroundColor">
+  <top-bar
+    auth="vm.auth"
+    on-login="vm.login()"
+    on-sign-up="vm.signUp()"
+    on-logout="vm.logout()"
+    on-share-page="vm.share()"
+    on-show-help-panel="vm.showHelpPanel()"
+    is-sidebar="::vm.isSidebar"
+    pending-update-count="vm.countPendingUpdates()"
+    on-apply-pending-updates="vm.applyPendingUpdates()"
+    search-controller="vm.search"
+    sort-key="vm.sortKey()"
+    sort-keys-available="vm.sortKeysAvailable()"
+    on-change-sort-key="vm.setSortKey(sortKey)">
+  </top-bar>
+
+  <div class="content">
+    <leos-filter-pane search-controller="vm.search"></leos-filter-pane> <!-- LEOS CHANGE -->
+    <sidebar-tutorial ng-if="vm.isSidebar"></sidebar-tutorial>
+    <share-dialog
+      ng-if="vm.shareDialog.visible"
+      on-close="vm.shareDialog.visible = false">
+    </share-dialog>
+    <help-panel ng-if="vm.helpPanel.visible"
+      on-close="vm.helpPanel.visible = false"
+      auth="vm.auth">
+    </help-panel>
+    <main ng-view=""></main>
+  </div>
+</div>

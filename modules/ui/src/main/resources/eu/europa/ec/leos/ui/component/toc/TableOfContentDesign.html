@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="package-mapping" content="component:eu.europa.ec.leos.ui.window.toc"/>
+</head>
+<body>
+    <vaadin-vertical-layout id="leosTocVerticalLayout" size-full :expand="1.0" spacing="false" margin="false">
+        <vaadin-horizontal-layout style-name="leos-accordion-tab-header" width="100%" spacing="true">
+            <vaadin-menu-bar _id="menuBar" :middle :left></vaadin-menu-bar>
+            <vaadin-button _id="tocExpandCollapseButton" style-name="link leos-toolbar-button" :middle :left></vaadin-button>
+            <vaadin-button _id="inlineTocEditButton" style-name="link leos-toolbar-button" :middle :left></vaadin-button>
+            <vaadin-label _id="tocUserCoEdition" style-name="leos-toolbar-user-coedition" :middle :left></vaadin-label>
+            <vaadin-label _id="spacerLabel" :expand="1.0" :middle :left></vaadin-label>
+            <vaadin-horizontal-layout spacing="false">
+                <vaadin-button _id="saveButton" style-name="link leos-toolbar-button" :middle :left></vaadin-button>
+                <vaadin-button _id="saveCloseButton" style-name="link leos-toolbar-button" :middle :left></vaadin-button>
+                <vaadin-button _id="cancelButton" style-name="link leos-toolbar-button" :middle :left></vaadin-button>
+            </vaadin-horizontal-layout>
+        </vaadin-horizontal-layout>
+
+        <vaadin-vertical-layout _id="tocLayout" :expand="1.0f" size-full margin="false" spacing="false">
+            <component-multi-select-tree-grid _id="tocTree" :expand="1.0f" style-name="leos-toc-tree" size-full></component-multi-select-tree-grid>
+            <vaadin-label _id="statusLabel" style-name="leos-toc-tree-status" :bottom :left size-full></vaadin-label>
+        </vaadin-vertical-layout>
+
+    </vaadin-vertical-layout>
+</body>
+</html>

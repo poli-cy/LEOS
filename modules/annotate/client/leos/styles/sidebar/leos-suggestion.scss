@@ -1,0 +1,15 @@
+@import '../../../src/styles/sidebar/components/primary-action-btn';
+
+.suggestion-merge-action {
+  @include primary-action-btn;
+  // the label occupies the entire space of the button and
+  // shows a darker state on hover
+  text-align: center;
+  height: 22px;
+}
+
+.annotation-leos-actions {
+  float: right;
+  padding: 6px 1px;
+  width: 100%;
+}

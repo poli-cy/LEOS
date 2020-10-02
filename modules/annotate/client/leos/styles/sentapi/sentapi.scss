@@ -1,0 +1,22 @@
+.message_wrapper {
+  height: 40%; 
+  text-align: center; 
+  font-size: 25px;
+}
+
+.spinner_wrapper {
+  height: 40%; 
+  text-align: center; 
+}
+
+.spinner_wrapper:before {
+  content: url(../images/spinner.gif);
+}
+
+.message {
+  padding: 15%;
+}
+
+.buttons_wrapper {
+  text-align: center;
+}

@@ -1,0 +1,30 @@
+<akomaNtoso>
+    <doc>
+        <meta>
+            <identification>aaaa</identification>
+        </meta>
+        <preface>
+            <heading>preface heading...</heading>
+        </preface>
+        <mainbody>
+            <part xml:id="part1">
+                <heading>part-head</heading>
+                <title xml:id="title1">
+                    <heading>title-head</heading>
+                    <num>part 1</num>
+                    <chapter xml:id="chap1">
+                        <num>chapter-num</num>
+                        <heading>chapter-head</heading>
+                        <section xml:id="sect1">
+                            <num>section-num</num>
+                            <heading>section-head</heading>
+                        </section>
+                        <blockContainer xml:id="bc3">
+                             Block container 3
+                        </blockContainer>
+                    </chapter>
+                </title>
+            </part>
+        </mainbody>
+    </doc>
+</akomaNtoso>

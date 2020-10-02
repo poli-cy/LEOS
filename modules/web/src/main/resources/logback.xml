@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration debug="false" scan="true" scanPeriod="5 minutes">
+
+    <property resource="application_leos.properties" />
+    <!-- Ignore or print logback internal status messages on the console -->
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener"/>
+    <!--<statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener"/>-->
+
+    <!-- Propagate changes to logging level onto the java.util.logging framework. -->
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+    <contextName>${leos.log.contextName}</contextName>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] [%X{xaActive}%X{xaReadOnly}] %-5level %logger{36} - %msg%n%rEx</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${leos.log.path}/${leos.log.filePrefix}-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- keep 15 days' worth of history -->
+            <maxHistory>15</maxHistory>
+        </rollingPolicy>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] [%X{xaActive}%X{xaReadOnly}] %-5level %logger{36} - %msg%n%rEx</pattern>
+        </encoder>
+    </appender>
+    
+    <appender name="ADMINLOGFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${leos.log.path}/${leos.log.filePrefix}-admin-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- keep 15 days' worth of history -->
+            <maxHistory>15</maxHistory>
+        </rollingPolicy>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] [%X{xaActive}%X{xaReadOnly}] %-5level %logger{36} - %msg%n%rEx</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="eu.europa.ec.leos" level="${leos.log.level}"/>
+
+    <logger name="freemarker" level="${leos.log.level}"/>
+    
+    <logger name="org.apache.chemistry"  level="${leos.chemistry.log.level}" additivity="false">
+        <appender-ref ref="FILE" />
+    </logger>
+    
+    <root level="${leos.log.level}">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>

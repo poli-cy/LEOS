@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/**
+ * Copyright 2019 European Commission
+ *
+ * Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+ * You may not use this work except in compliance with the Licence.
+ * You may obtain a copy of the Licence at:
+ *
+ *     https://joinup.ec.europa.eu/software/page/eupl
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the Licence for the specific language governing permissions and limitations under the Licence.
+*/
+
+//--------------------------------XML reference-------------------------------/
+$BLUE_MARINE: #507C90;
+%xmlReference {
+    mref {
+        display: inline;
+        font-weight: normal;
+        color: $BLUE_MARINE;
+        outline: 1px dotted $BLUE_MARINE;
+    }
+
+    mref[#{"leos\\:broken"}] {
+        color: red;
+        font-style: italic;
+        outline: 1px dotted red;
+        &:after {
+            display: inline;
+            font-style: normal;
+            font-family: "Vaadin-Icons";
+            content: "warning";
+            vertical-align: bottom;
+        }
+        & > ref {
+            color: red; 
+        }
+    }
+
+    ref {
+        color: blue;
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
+
+//--------------------------------Editor reference-----------------------------/

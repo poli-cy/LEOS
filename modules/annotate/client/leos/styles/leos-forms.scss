@@ -1,0 +1,15 @@
+.btn-icon {
+  display: inline-block;
+  font-size: 12px;
+}
+
+.btn-clean {
+  color: $leos-btn-text-color;
+}
+
+.btn--cancel {
+  color: $leos-btn-text-color;
+  &:hover {
+    color: darken($leos-hover-btn-text-color, 15%);
+  }
+}

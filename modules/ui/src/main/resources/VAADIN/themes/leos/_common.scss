@@ -1,0 +1,82 @@
+/**
+ * Copyright 2017 European Commission
+ *
+ * Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+ * You may not use this work except in compliance with the Licence.
+ * You may obtain a copy of the Licence at:
+ *
+ *     https://joinup.ec.europa.eu/software/page/eupl
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the Licence for the specific language governing permissions and limitations under the Licence.
+ */
+//global variables
+$WHITE:#FFFFFF;
+$BLACK:#000000;
+$GREY:#EEEEEE;
+$DARK_GREY: #808080;
+$DARK_SLATE_GREY: #474747;
+$GREEN_COLOR:#2c9720;
+$RED_COLOR:#ed473b;
+
+$MAIN_BLUE:#0066A5;         //Navigation Blue
+$HEADER_BLUE:#0065A2;
+$ACTION_BLUE:#004697;       //Action blue/ from decide palette /alternate #003f59
+$PALE_BG_BLUE:#E5F0F6;      //left menu background/ from decide palette
+$LIGHT_BLUE:#7bd2f6;        //Focus color/ from decide palette
+$TAB_BACKGROUND:#F6f9fb;    //Tab BackGround from decide palette
+$MENU_BORDER_COLOR:#6E6969;       //picked from Decide
+
+$G_BORDER_COLOR:#B7B7B7;//#7ec6e3;
+$G_GREEN_COLOR:#38b64b;     //picked from Decide
+$G_BROWN_COLOR:#ee7c08;
+
+$SLIDER_BACKGROUND_COLOR:#d3d3d3;
+
+$ELEMENT_EDITABLE_BORDER_COLOR: #A6C7FF;
+$ELEMENT_EDITABLE_BACKGROUND_COLOR: #FFFAFD;
+
+$ACCORDION_HEADER:$HEADER_BLUE;
+$ACCORDION_HEADER_DESELECTED: rgba(0, 101, 162, 0.61);
+$RECENT:#595959;
+$RECENT_HOVER:rgba(204, 204, 204, 0.1);
+$BLUE_MILESTONE_TITLE:#0071E0;
+$BLUE_MILESTONE_BORDER:#59D5FF;
+$BLUE_MILESTONE_HOVER:rgba(89, 213, 255, 0.1);
+$INTERMEDIATE:#6DBFA9;
+$INTERMEDIATE_HOVER: rgba(32, 191, 158, 0.13);
+$VERSIONS_ROW_BORDER: rgba(0, 70, 151, 0.22);
+$TITLE_DESCRIPTION_BLOCK: #c7c7c7;
+
+//global font definitions
+@font-face {
+    font-family: 'Vaadin-Icons';
+    src: url('./fonts/Vaadin-Icons.eot');
+    src: url('./fonts/Vaadin-Icons.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Vaadin-Icons.woff') format('woff'),
+    url('./fonts/Vaadin-Icons.ttf') format('truetype'),
+    url('./fonts/Vaadin-Icons.svg#icomoon') format('svg');
+}
+
+//global style definition
+
+//for usages by vaadin-icons addon
+.Vaadin-Icons {
+    font-family: 'Vaadin-Icons';
+}
+
+//To add on input prompt of vaadin text field component
+.v-textfield[class*="prompt"] {
+    font-style: italic;
+}
+
+.v-textfield::placeholder {
+    color: #a3a3a3;
+    font-style: italic;
+}
+
+.v-textfield:-ms-input-placeholder { /* IE 10+ */
+    color: #a3a3a3;
+    font-style: italic;
+}

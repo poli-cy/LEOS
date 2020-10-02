@@ -1,0 +1,24 @@
+$GREEN_COLOR: #26BC15;
+
+%contentRemoved {
+    text-decoration: line-through;
+    color: red;  
+}
+
+%contentAdded {
+    color: $GREEN_COLOR;
+}
+
+.leos-content-removed {
+    @extend %contentRemoved;
+    * {
+        @extend %contentRemoved;
+    }
+}
+
+.leos-content-new {
+    @extend %contentAdded;
+    * {
+        @extend %contentAdded;
+    }
+}

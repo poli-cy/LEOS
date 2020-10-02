@@ -1,0 +1,67 @@
+
+.h-icon-suggestion:before {
+  content: url(../images/icons/lightbulb.svg);
+}
+
+.h-icon-suggestion {
+  filter: invert(.3);
+}
+
+.annotator-adder-actions:hover .annotator-adder-actions__button .h-icon-suggestion {
+  filter: invert(.6);
+}
+
+.annotator-adder-actions .annotator-adder-actions__button:hover .h-icon-suggestion {
+  filter: invert(.3);
+}
+
+.annotator-adder-actions__button.annotator-disabled .h-icon-suggestion {
+  filter: invert(.8);
+}
+
+.annotator-adder-actions__button.annotator-disabled .annotator-adder-actions__label {
+  color:  $gray-lighter !important;
+}
+
+
+.annotator-adder-actions .annotator-adder-actions__button:hover.annotator-disabled .h-icon-suggestion {
+  filter: invert(.8);
+}
+
+.annotator-adder-actions .annotator-adder-actions__button:hover.annotator-disabled .annotator-adder-actions__label {
+  color:  $gray-lighter !important;
+}
+
+.annotator-adder-actions:hover .annotator-adder-actions__button.annotator-disabled .h-icon-suggestion {
+  filter: invert(.8);
+}
+
+.annotator-adder-actions:hover .annotator-adder-actions__button.annotator-disabled .annotator-adder-actions__label {
+  color:  $gray-lighter !important;
+}
+
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+[data-title]:after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -1.6em;
+    left: 100%;
+    padding: 4px 4px 4px 8px;
+    color: $black;
+    white-space: nowrap;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px $gray-dark;
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+    background: $smoke-white;
+    font-size: 12px;
+    font-family: $sans-font-family;
+}
+[data-title] {
+    position: relative;
+}

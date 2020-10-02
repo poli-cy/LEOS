@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/**
+ * Copyright 2019 European Commission
+ *
+ * Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+ * You may not use this work except in compliance with the Licence.
+ * You may obtain a copy of the Licence at:
+ *
+ *     https://joinup.ec.europa.eu/software/page/eupl
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the Licence for the specific language governing permissions and limitations under the Licence.
+*/
+
+$LIST_PADDING: 1.0cm;
+$LIST_SPACING: 30px;
+
+%paddedList {
+    padding-top: 6pt;
+    padding-bottom: 6pt;
+}
+
+%padList {
+    display: block;
+    position: relative;
+
+    & > num {
+        @extend %paddedText;
+        display: block;
+        min-width: $LIST_SPACING;
+        float: left;
+    }
+
+    & > content {
+        & > table {
+            @extend %tableMargin;
+        }
+        & > p {
+            @extend %paddedText;
+            display: block;
+        }
+        & > aknP {
+            @extend %paddedText;
+            display: block;
+            padding-left: $LIST_SPACING;
+        }
+    }
+}
+//------------------------------- XML Styles --------------------------------//
+%xmlList {
+
+    list {
+        point,
+        indent {
+            padding-left: 34px;
+            @extend %padList;
+        }
+    }
+
+
+    point, indent {
+        @extend %padList;
+    }
+
+
+    blockList {
+        display: block;
+    }
+
+    blockList > item {
+        display: block;
+        padding-left: $LIST_PADDING;
+        @extend %paddedList;
+
+        & > num {
+            min-width: $LIST_PADDING;
+            margin-left: -$LIST_PADDING;
+            display: block;
+            float: left;
+        }
+
+        & > aknP, & > p {
+            display: block;
+            position: relative;
+        }
+    }
+}
+
+//------------------------------- Editor Styles -----------------------------//
+%list {
+    list-style-type: none;
+    padding-left: 0;  // override default list padding
+    margin: 0;        // override default list margin
+
+    & > li {
+        @extend %paddedList;
+        padding-left: $LIST_PADDING;
+        position: relative;
+        padding-bottom: 0pt;
+
+        &:before {
+            color: $GREY_COLOR;
+            content: attr(data-akn-num);
+            //min-width: $LIST_PADDING;
+            margin-left: -$LIST_PADDING;
+            float: left;
+            margin-right: 15px;
+        }
+    }
+}
+
+%editorList {
+    ol[data-akn-name=aknLevelMandate],
+    ol[data-akn-name=aknOrderedList],
+    ol[data-akn-name=aknLevelOrderedList],
+    ul[data-akn-name="UnNumberedBlockList"],
+    ol[data-akn-name="NumberedBlockList"]{
+        @extend %list;
+    }
+
+    ol[data-akn-name=aknLevel] > li > ol[data-akn-name=aknLevelOrderedList] {
+        padding-left: $LIST_SPACING;
+    }
+
+    ol > li[data-akn-name="aknNumberedParagraph"] > ol[data-akn-name=aknOrderedList] {
+        padding-left: 40px;
+    }
+
+}
+
+//------------------------------- Showblock Styles --------------------------//
+%showblockList {
+    div[data-akn-name="level"] ul[data-akn-name="UnNumberedBlockList"] {
+        & li {
+            @include blockOutline("INDENT", $LIST_PADDING);
+        }
+    }
+
+    div[data-akn-name="level"] ol[data-akn-name="NumberedBlockList"] {
+        & li {
+            @include blockOutline("POINT", $LIST_PADDING);
+        }
+    }
+}
